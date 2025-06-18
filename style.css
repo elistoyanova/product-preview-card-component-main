@@ -1,0 +1,189 @@
+:root {
+  --clr-green-500: hsl(158, 36%, 37%);
+  --clr-green-600: hsl(158, 42%, 18%);
+
+  --clr-black: hsl(212, 21%, 14%);
+  --clr-grey: hsl(228, 12%, 48%);
+  --clr-cream: hsl(30, 38%, 92%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  --fs-paragraph: 14px;
+
+  --ff-primary: "Montserrat", sans-serif;
+  --ff-secondary: "Fraunces", serif;
+
+  --fw-primary-500: 500;
+  --fw-primary-700: 700;
+  --fw-secondary-500: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--ff-primary);
+  color: var(--clr-black);
+  background-color: var(--clr-cream);
+  padding: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 1fr;
+
+  border-radius: 10px;
+  background-color: var(--clr-white);
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  max-width: 375px;
+  
+}
+
+.text-box {
+  padding: 1.25rem;
+}
+
+.mobile-image {
+  width: 100%;
+  height: auto;
+}
+
+h2 {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: var(--clr-grey);
+  font-weight: var(--fw-primary-500);
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: var(--fw-primary-700);
+  margin-bottom: 20px;
+  font-family: var(--ff-secondary);
+}
+
+p {
+  font-size: var(--fs-paragraph);
+  color: var(--clr-grey);
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-weight: var(--fw-primary-500);
+}
+
+.price {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.current-price {
+  font-size: 2rem;
+  color: var(--clr-green-500);
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-secondary-500);
+}
+
+.previous-price {
+  font-size: 0.8rem;
+  color: var(--clr-grey);
+  text-decoration: line-through;
+  font-weight: var(--fw-primary-500);
+}
+
+button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--ff-primary);
+  background-color: var(--clr-green-500);
+  color: var(--clr-white);
+  padding: 15px 10px;
+  border-radius: 10px;
+  font-weight: var(--fw-primary-700);
+  border: none;
+
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--clr-green-600);
+  cursor: pointer;
+}
+
+
+
+@media (min-width: 376px) {
+  #responsive-image {
+    content: url("./images/image-product-desktop.jpg");
+    width: 100%;
+    height: 100%;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    grid-template-columns: 1fr 1fr;
+    max-width: 800px;
+    
+  }
+
+  .text-box {
+    padding: 2.5rem 2.8rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    padding-right: 2rem;
+    margin-bottom: 30px;
+    line-height: 1;
+  }
+
+  h2 {
+    font-size: 0.8rem;
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-size: 1.15rem;
+    margin-bottom: 40px;
+    line-height: 1.8;
+  }
+
+  .price {
+    
+    margin-bottom: 40px;
+  }
+
+  .current-price {
+    font-size: 2.5rem;
+  }
+
+  .previous-price {
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 20px 15px;
+    font-size: 1.1rem;
+    font-weight: var(--fw-primary-500);
+  }
+}
