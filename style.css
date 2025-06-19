@@ -126,7 +126,7 @@ button:hover {
 
 
 
-@media (min-width: 376px) {
+@media (min-width: 855px) {
   #responsive-image {
     content: url("./images/image-product-desktop.jpg");
     width: 100%;
